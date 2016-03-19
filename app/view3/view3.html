@@ -1,6 +1,13 @@
-<div class="container">
-	<div class="row"></div>
+<div class="container" ng-controller = "View3Ctrl">
+	<div class="row">
+		<div>
+            <h3>Profile Pic</h3>                         
+                <div>
+                    <input type="file" name="image" id="image" ng-file-select="onFileSelect($files)">
+                    <br/>
+                    <span class="errorMsg">{{ message}}</span>
+                </div>
 
-
-
+            </div>
+	</div>
 </div>

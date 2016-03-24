@@ -1,12 +1,19 @@
 <?php 
 include ('conexion.php');
 
-$pic = mysql_query("SELECT * FROM productos WHERE ID");
+$result = $conn->query("SELECT * FROM productos");
 
-
-
-
-
+$miArray = array();
+ 
+while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
+        $miArray[] = $rs;   
+}
+ 
+$salida = json_encode($myArray);
+ 
+$conn->close();
+ 
+echo($salida); 
 
 
 

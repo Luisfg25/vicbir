@@ -1,13 +1,38 @@
 <div class="container" ng-controller = "View3Ctrl">
 	<div class="row">
-		<div>
-            <h3>Profile Pic</h3>                         
-                <div>
-                    <input type="file" name="image" id="image" ng-file-select="onFileSelect($files)">
-                    <br/>
-                    <span class="errorMsg">{{ message}}</span>
-                </div>
+		<form class="form-horizontal" name="addphoto">
+<fieldset>
 
-            </div>
+<!-- Form Name -->
+<legend>Cargar Fotos</legend>
+
+<!-- Text input-->
+<input type="hidden" name="prodID">
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Titulo</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="phototitle" ng-model="phototitle" type="text" placeholder="Ingrese titulo de la foto" class="form-control input-md">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Contenido</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="phototext" ng-model="phototext" type="text" placeholder="Ingresar contenido" class="form-control input-md">  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Fecha</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="photocontent" ng-model="photocontent" type="text" placeholder="Texto alternativo" class="form-control input-md">
+  </div>
+</div>
+
+<!-- Button -->
+    <input type="button" name="photo_save" value="Guardar" ng-click="savePhoto()">  
+</form>
 	</div>
 </div>

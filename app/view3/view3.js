@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('myApp.view3', [])
 
 .controller('View3Ctrl', ['$scope','$http',function($scope,$http) {
@@ -19,6 +17,6 @@ angular.module('myApp.view3', [])
         .error(function(data, status, headers, config){
            console.log("Error enviando datos al php");
         });
-    }
+    };
 
 }]);

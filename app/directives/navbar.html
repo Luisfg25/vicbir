@@ -13,14 +13,14 @@
             <a class="navbar-brand titles " href="#/">Victoria Birchner</a>
           </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+          <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="navctrl">
 
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#/">Inicio</a></li>
-              <li><a ng-href="#/discografia">Discografia</a></li>
-              <li><a ng-href="#/videos">Videos</a></li>
-              <li><a ng-href="#/fotos">Fotos</a></li>
-              <li><a ng-href="#/contacto">Contacto</a></li>
+              <li ng-class="{active: isActive('/')}"><a href="#/">Inicio</a></li>
+              <li ng-class="{active: isActive('/discografia')}"><a ng-href="#/discografia">Discografia</a></li>
+              <li ng-class="{active: isActive('/videos')}"><a ng-href="#/videos">Videos</a></li>
+              <li ng-class="{active: isActive('/fotos')}"><a ng-href="#/fotos">Fotos</a></li>
+              <li ng-class="{active: isActive('/contacto')}"><a ng-href="#/contacto">Contacto</a></li>
             </ul>
           </div>
         </div>

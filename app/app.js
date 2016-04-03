@@ -47,4 +47,12 @@ angular.module('myApp', [
       restrict: 'E',
       templateUrl:'/directives/navbar.html'
     };
-  });
+  })
+
+  .controller('navctrl', ['$scope','$location',function($scope,$location){
+
+      $scope.isActive = function(urlactiva){
+        return urlactiva === $location.path(); 
+      };  
+  }]);
+  

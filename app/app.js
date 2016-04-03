@@ -8,7 +8,8 @@ angular.module('myApp', [
   'myApp.view3',
   'myApp.view4',
   'myApp.view5',
-  'myApp.version'
+  'myApp.version',
+  'angularFileUpload'
 ]).config(function ($routeProvider) {
     $routeProvider.
     when('/', {
@@ -21,15 +22,15 @@ angular.module('myApp', [
         controller: 'View2Ctrl',
         controllerAs: 'about'
       }).
-      when('/fotos', {
+      when('/videos', {
         templateUrl: 'view3/view3.html',
         controller: 'View3Ctrl',
-        controllerAs: 'fotos'
+        controllerAs: 'carga'
       })      .
-      when('/videos', {
+      when('/fotos', {
         templateUrl: 'view4/view4.html',
         controller: 'View4Ctrl',
-        controllerAs: 'contact'
+        controllerAs: 'fotos'
       })
       .
       when('/contacto', {
@@ -40,4 +41,10 @@ angular.module('myApp', [
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .directive("navbar",function(){
+    return{
+      restrict: 'E',
+      templateUrl:'/directives/navbar.html'
+    };
   });

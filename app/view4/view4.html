@@ -1,5 +1,10 @@
-<p>This is the partial for view 4.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+
+<div class="container">
+<div class="row" >
+    <div class="col-xs-4" ng-repeat-start="img in images">
+       <img ng-src="{{img.location}}" class="gallery"/>
+    </div>
+    <div class="clearfix" ng-if="$index%3==2"></div>
+    <div ng-repeat-end=""></div>
+</div>
+</div>

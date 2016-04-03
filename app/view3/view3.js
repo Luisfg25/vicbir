@@ -1,9 +1,12 @@
 'use strict';
 
-angular.module('myApp.view3', ['angularFileUpload'])
+angular.module('myApp.view3',[])
     
-.controller('View3Ctrl', ['$scope','$http',function($scope,$http, FileUploader) {
+.controller('View3Ctrl', ['$scope','$http','FileUploader',function($scope,$http, FileUploader) {
 
-    $scope.uploader = new FileUploader();
+$scope.onUploadSelect = function($files) {
+  $scope.newResource.newUploadName = $files[0].name;
+};
 	
+
 }]);

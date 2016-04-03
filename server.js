@@ -25,25 +25,7 @@ app.use('/bower_components',  express.static(__dirname + 'app/bower_components')
 if ('development' === app.get('env')) {
   app.use(errorhandler());
 }
- 
-mongoose.connect('mongodb://localhost/test');
-
-var db = mongoose.connection;
-db.on('error', console.error.bind(console,'Connection error'));
-db.once('open', function(){
-	//We're connected!
-});
-
-Schema = mongoose.Schema;
-
-	var ImageSchema = new Schema({
-		fileName: String,
-		url: String,
-		contentType: String,
-		size: String,
-		dimensions: String
-})
-
 http.createServer(app).listen(app.get('port'), function () {
    console.log('myApp server listening on port ' + app.get('port'));
 });
+

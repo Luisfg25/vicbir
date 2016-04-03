@@ -1,5 +1,13 @@
-<p>This is the partial for view 5.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="carousel" id="slider" style="margin-left: 20px;">
+
+    <label class="labelSecurity">Galeria</label><br />
+
+    <div class="carousel-inner">
+        <div class="item" ng-class="{active:!$index}" ng-repeat="imgs in images">
+            <img src="{{ imgs.location }}" class="img-responsive">
+        </div>
+    </div>
+
+    <a class="carousel-control right" href="#slider" data-slide="next"></a>
+
+</div>

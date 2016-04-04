@@ -7,7 +7,37 @@
 
 body {
   padding: 0;
+  
+
+background: #000000; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #000000 , #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
 }
+.navbar-inverse{
+
+  background:#000;
+
+}
+.nav ul li a{
+  color:red;
+}
+
+.navbar-inverse{
+  border-bottom: 1px solid white;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+    color:white;
+}
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+  font-size: 15px;
+  font-weight: bold;
+  color:black;
+   background: white;
+  }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,

@@ -1,20 +1,19 @@
 
 <div class="container">
-<div class="row" >
-    <div class="col-xs-4" ng-repeat-start="img in images">
-       <img ng-src="{{img.location}}" class="gallery"/>
+<div ng-hide="hola" class="row altura" >
+    <div class="col-md-4 col-xs-6" ng-repeat-start="img in images">
+       <img ng-click="activar(img.id)" ng-src="{{img.location}}" class="gallery"/>
     </div>
     <div class="clearfix" ng-if="$index%3==2"></div>
     <div ng-repeat-end=""></div>
 </div>
 
-<div ng-controller="CarouselDemoCtrl">
-  <div style="height: 305px">
+  <div ng-show="hola">
     <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
       <uib-slide ng-repeat="slide in images track by slide.id" index="slide.id">
-        <img ng-src="{{slide.location}}" style="margin:auto;" class="img-responsive">
+        <img ng-src="{{slide.location}}" class="carou">
         <div class="carousel-caption">
-          <h4>Slide {{slide.id}}</h4>
+          
           <p>{{slide.name}}</p>
         </div>
       </uib-slide>

@@ -8,11 +8,10 @@
 body {
   padding: 0;
   
-
-background: #000000; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #000000 , #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        
+background: #870000; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #870000 , #190A05); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #870000 , #190A05); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */;
+               
 }
 .navbar-inverse{
 
@@ -22,21 +21,31 @@ background: linear-gradient(to left, #000000 , #434343); /* W3C, IE 10+/ Edge, F
 .nav ul li a{
   color:red;
 }
+.navbar{
 
-.navbar-inverse{
-  border-bottom: 1px solid white;
+
+background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(19,19,19,0.4) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%,rgba(19,19,19,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(19,19,19,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#66131313',GradientType=0 );
+
+ border: none;
 }
+.navbar-inverse{
+  background: none;
+} 
 
 .navbar-inverse .navbar-nav > li > a{
-    color:white;
+    color:none;
 }
 .navbar-inverse .navbar-nav > .active > a, 
 .navbar-inverse .navbar-nav > .active > a:hover, 
 .navbar-inverse .navbar-nav > .active > a:focus {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: bold;
-  color:black;
-   background: white;
+  color:white;
+   background: black;
+
   }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -49,8 +58,8 @@ background: linear-gradient(to left, #000000 , #434343); /* W3C, IE 10+/ Edge, F
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
+  border: none;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -58,13 +67,14 @@ background: linear-gradient(to left, #000000 , #434343); /* W3C, IE 10+/ Edge, F
   margin-bottom: 0;
   line-height: 40px;
   padding-bottom: 19px;
+
 }
 
 /* Custom page footer */
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
+  border: none;
 }
 
 .container-narrow > hr {
@@ -100,7 +110,13 @@ font-size: 30px;
 
 .gallery{
   width: 100%;
-  margin: 5px;
+  margin: 5px;  
+  max-height: 150px;
+}
+.carou{
+  margin:auto;
+  max-height: 500px;
+  width: 100%;
 }
 
 /* Responsive: Portrait tablets and up */

@@ -1,13 +1,40 @@
-<div class="carousel" id="slider" style="margin-left: 20px;">
+<div class="container">
 
-    <label class="labelSecurity">Galeria</label><br />
+	<div class="row">
+		<div class="col-md-6"></div>
+		<div class="col-md-6">
 
-    <div class="carousel-inner">
-        <div class="item" ng-class="{active:!$index}" ng-repeat="imgs in images">
-            <img src="{{ imgs.location }}" class="img-responsive">
+				<form name="contactForm" novalidate>
+        <!-- NAME -->
+        <div ng-class="{'form-error':contactForm.name.$dirty && contactForm.name.$invalid, 'form-group':true}">
+          <input type="text" name="name" ng-model="formData.name" placeholder="Nombre" ng-minlength="3" required="" />
+          <div ng-messages="contactForm.name.$error" ng-show="contactForm.name.$dirty" >
+            <div ng-message="minlength">Name too short</div>
+            <div ng-message="required">Required Name</div>
+          </div>
         </div>
-    </div>
+        <!-- EMAIL -->
+        <div ng-class="{'form-error':contactForm.email.$dirty && contactForm.email.$invalid, 'form-group':true}">
+          <input type="email" name="email" ng-model="formData.email" placeholder="Email" required />
+          <div ng-messages="contactForm.email.$error" ng-show="contactForm.email.$dirty">
+            <div ng-message="email">Invalid Email</div>
+            <div ng-message="required">Required Email</div>
+          </div>
+        </div>
+        <!-- TEL -->
+        <div ng-class="{'form-error':contactForm.tel.$dirty && contactForm.tel.$invalid, 'form-group':true}">
+          <input type="text" name="tel" ng-pattern=/\d{3}-\d{3}-\d{4}/ ng-model="formData.tel" placeholder="Telefono" required />
+          <div ng-messages="contactForm.tel.$error" ng-show="contactForm.tel.$dirty">
+            <div ng-message="pattern">Valid form: XXX-XXX-XXXX</div>
+            <div ng-message="required">Required Phone</div>
+          </div>
+        </div>
+        <!-- SUBMIT BUTTON -->
+        <input type="submit" ng-click="processForm()" ng-disabled="contactForm.$invalid" value="Enviar" />
+      </form>
 
-    <a class="carousel-control right" href="#slider" data-slide="next"></a>
 
-</div>
+		</div>
+	</div>
+
+    </div>  

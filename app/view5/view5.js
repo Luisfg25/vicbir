@@ -5,7 +5,7 @@ angular.module('myApp.view5', [])
 	.controller('View5Ctrl',['$scope','$http',function($scope,$http){
 
 	$scope.formData = {};
-  $scope.processForm = function() {
+  	$scope.processForm = function() {
     alert('valid form!')
     $http({
       method  : 'POST',

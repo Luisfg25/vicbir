@@ -24,10 +24,6 @@ background: linear-gradient(to left, #870000 , #190A05); /* W3C, IE 10+/ Edge, F
 .navbar{
 
 
-background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(19,19,19,0.4) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%,rgba(19,19,19,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(19,19,19,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#66131313',GradientType=0 );
 
  border: none;
 }
@@ -44,7 +40,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', e
   font-size: 17px;
   font-weight: bold;
   color:white;
-   background: black;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(19,19,19,0.4) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%,rgba(19,19,19,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(19,19,19,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#66131313',GradientType=0 );
+  border-radius: 6px;
 
   }
 
@@ -114,9 +114,72 @@ font-size: 30px;
   max-height: 150px;
 }
 .carou{
-  margin:auto;
+  border: 2px solid red;
   max-height: 500px;
+}
+
+.col-md-4{
+	
+  float: right;
+margin-top: 10%;
+  
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 1%, rgba(0,0,0,0.5) 49%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 1%,rgba(0,0,0,0.5) 49%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 1%,rgba(0,0,0,0.5) 49%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#80000000',GradientType=0 );
+
+  
+  border-radius: 15px 0 15px 15px;
+
+}
+
+.divform{
+padding-top:5%;
+padding-bottom:5%;
+text-align:center;  
+}
+
+input#namee, input#emaile, input#tele{
+  background-color:white;
+  border:black;
+  width:100%;
+  border-radius: 3px 0 3px 3px;
+}
+
+#submite{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  font: bold 14px Arial;
+  cursor: pointer;
+}
+
+#submite:hover{
+  opacity:0.2;
+}
+
+/* Section Videos */
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* Responsive: Portrait tablets and up */

@@ -10,8 +10,8 @@
 
   <div ng-show="hola">
     <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-      <uib-slide ng-repeat="slide in images track by slide.id" index="slide.id">
-        <img ng-src="{{slide.location}}" class="carou">
+      <uib-slide ng-repeat="slide in images track by slide.id" index="slide.id" class="carou">
+        <img ng-src="{{slide.location}}" class="img-responsive">
         <div class="carousel-caption">
           
           <p>{{slide.name}}</p>

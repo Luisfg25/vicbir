@@ -1,12 +1,9 @@
 'use strict';
 
-angular.module('myApp.view3',[])
+angular.module('myApp.view3',['youtube-embed'])
     
-.controller('View3Ctrl', ['$scope','$http','FileUploader',function($scope,$http, FileUploader) {
+.controller('View3Ctrl', ['$scope',function($scope) {
 
-$scope.onUploadSelect = function($files) {
-  $scope.newResource.newUploadName = $files[0].name;
-};
-	
+	$scope.anotherGoodOne = 'https://www.youtube.com/watch?v=iVsY18yuPJA';
 
 }]);

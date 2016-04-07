@@ -121,7 +121,7 @@ font-size: 30px;
 .col-md-4{
 	
   float: right;
-margin-top: 10%;
+margin-top: 15px;
   
   background: -moz-linear-gradient(top, rgba(0,0,0,0.5) 1%, rgba(0,0,0,0.5) 49%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 1%,rgba(0,0,0,0.5) 49%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -133,10 +133,20 @@ margin-top: 10%;
 
 }
 
-.divform{
-padding-top:5%;
-padding-bottom:5%;
-text-align:center;  
+  .divform{
+  padding-top:5%;
+  padding-bottom:5%;
+  text-align:center;  
+}
+
+input#come{
+  background: white;
+  border: black;
+  width:100%;
+  height:100px;
+  border-radius: 3px 0 3px 3px;
+  vertical-align: top;
+
 }
 
 input#namee, input#emaile, input#tele{
@@ -144,6 +154,7 @@ input#namee, input#emaile, input#tele{
   border:black;
   width:100%;
   border-radius: 3px 0 3px 3px;
+  
 }
 
 #submite{

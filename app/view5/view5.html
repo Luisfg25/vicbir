@@ -1,43 +1,61 @@
 <div class="container">
 
 	<div class="row">
+
 		<div class="col-md-6">
 
-			<img src="">
+			
+img src="imgs/b.jpg">
+
+
+			
+			
 		</div>
-		<div class="col-md-6">
+
+		<div class="col-md-4" id="form">
+<div class="divform">
 
 				<form name="contactForm" novalidate>
         <!-- NAME -->
         <div ng-class="{'form-error':contactForm.name.$dirty && contactForm.name.$invalid, 'form-group':true}">
-          <input type="text" name="name" ng-model="formData.name" placeholder="Nombre" ng-minlength="3" required="" />
+          <input type="text" name="name" id="namee" ng-model="formData.name" placeholder="Nombre" ng-minlength="3" required="" />
           <div ng-messages="contactForm.name.$error" ng-show="contactForm.name.$dirty" >
-            <div ng-message="minlength">Name too short</div>
-            <div ng-message="required">Required Name</div>
+            <div ng-message="minlength">Nombre muy corto</div>
+            <div ng-message="required">Falta nombre</div>
           </div>
         </div>
         <!-- EMAIL -->
         <div ng-class="{'form-error':contactForm.email.$dirty && contactForm.email.$invalid, 'form-group':true}">
-          <input type="email" name="email" ng-model="formData.email" placeholder="Email" required />
+          <input type="email" id="emaile" name="email" ng-model="formData.email" placeholder="Email" required />
           <div ng-messages="contactForm.email.$error" ng-show="contactForm.email.$dirty">
             <div ng-message="email">Invalid Email</div>
-            <div ng-message="required">Required Email</div>
+            <div ng-message="required">Falta Email</div>
           </div>
         </div>
         <!-- TEL -->
         <div ng-class="{'form-error':contactForm.tel.$dirty && contactForm.tel.$invalid, 'form-group':true}">
-          <input type="text" name="tel" ng-pattern=/\d{3}-\d{3}-\d{4}/ ng-model="formData.tel" placeholder="Telefono" required />
+          <input type="text" name="tel" id="tele" ng-pattern=/\d{3}-\d{3}-\d{4}/ ng-model="formData.tel" placeholder="Telefono" required />
           <div ng-messages="contactForm.tel.$error" ng-show="contactForm.tel.$dirty">
-            <div ng-message="pattern">Valid form: XXX-XXX-XXXX</div>
-            <div ng-message="required">Required Phone</div>
+            <div ng-message="pattern">Valid form: </div>
+            <div ng-message="required">Falta telefono</div>
           </div>
         </div>
+	<!-- COMENTARIOS -->
+        <div >
+          <input type="text" name="comentario" id="come" " placeholder="comentario" ng-minlength="3" required="" />
+          <div ng-messages="contactForm.comentario.$error" ng-show="contactForm.comentario.$dirty" >
+            <div ng-message="minlength">comentario muy corto</div>
+            <div ng-message="required">Required coment</div>
+          </div>
+        </div>
+	
+
         <!-- SUBMIT BUTTON -->
-        <input type="submit" ng-click="processForm()" ng-disabled="contactForm.$invalid" value="Enviar" />
+        <input type="submit" id="submite" ng-click="processForm()" ng-disabled="contactForm.$invalid" value="Enviar" />
       </form>
 
 
 		</div>
 	</div>
-
+</div>
     </div>  

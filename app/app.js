@@ -56,4 +56,10 @@ angular.module('myApp', [
         return ab === $location.path(); 
       };  
   }])
+  .filter('startFrom', function(){
+    return function(input,start){
+      start = parseInt(start, 9);
+      return input.slice(start);
+    }
+  });
   

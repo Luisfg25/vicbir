@@ -36,4 +36,5 @@ angular.module('myApp.view3',['youtube-embed'])
 		$scope.videoChange=function(vi){
 			$scope.anotherGoodOne=vi;
 		}
+
 }]);

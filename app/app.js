@@ -9,7 +9,9 @@ angular.module('myApp', [
   'myApp.view4',
   'myApp.view5',
   'myApp.version',
-  'angularFileUpload'
+  'angularFileUpload',
+  'ui.bootstrap',
+  'youtube-embed'
 ]).config(function ($routeProvider) {
     $routeProvider.
     when('/', {
@@ -48,11 +50,16 @@ angular.module('myApp', [
       templateUrl:'/directives/navbar.html'
     };
   })
-
   .controller('navctrl', ['$scope','$location',function($scope,$location){
 
-      $scope.isActive = function(urlactiva){
-        return urlactiva === $location.path(); 
+      $scope.isActive = function(ab){
+        return ab === $location.path(); 
       };  
-  }]);
+  }])
+  .filter('startFrom', function(){
+    return function(input,start){
+      start = parseInt(start, 9);
+      return input.slice(start);
+    }
+  });
   

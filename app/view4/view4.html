@@ -1,10 +1,39 @@
 
 <div class="container">
-<div class="row" >
-    <div class="col-xs-4" ng-repeat-start="img in images">
-       <img ng-src="{{img.location}}" class="gallery"/>
-    </div>
-    <div class="clearfix" ng-if="$index%3==2"></div>
-    <div ng-repeat-end=""></div>
+<div ng-hide="hola">
+  <div class="row altura">
+      <div class="col-md-4 col-xs-6" ng-repeat-start="img in images | startFrom: currentPage*imgsPerPage | limitTo: imgsPerPage">
+         <div ng-click="activar(img.id)" class="gallery" ng-style="{'background-image':'url({{img.location}})'}"></div>
+        
+      </div>
+      <div class="clearfix" ng-if="$index%3==2"></div>
+      <div ng-repeat-end=""></div>
+
+  </div>
+  <div class="pagination" ng-repeat="pag in pagi">
+    <button type="button" ng-click="cp(pag)" class="btn btn-primary">{{pag}}</button>
+
+  </div>
 </div>
+  <div ng-show="hola">
+    <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+      <uib-slide ng-repeat="slide in images track by slide.id" index="slide.id" class="carou">
+        <img ng-src="{{slide.location}}" class="img-responsive">
+        <div class="carousel-caption">
+          
+          <p>{{slide.name}}</p>
+        </div>
+      </uib-slide>
+    </uib-carousel>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 </div>

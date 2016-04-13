@@ -1,8 +1,21 @@
-<div class="container" ng-controller = "View3Ctrl">
-	<div class="row">
-		<div class="form-group">
-  <label>File Upload</label>
-  <input type="file" ng-file-select="onUploadSelect($files)" ng-model="newResource.newUpload">
-</div>  
+<div class="container">
+	<div class="embed-responsive embed-responsive-16by9">
+  		<youtube-video class="embed-responsive-item" video-url="anotherGoodOne"></youtube-video>
 	</div>
-</div>
+	<div id="scrollvideo">
+		<div class="row video" ng-repeat="video in videos">
+			<div class="col-md-4">
+					<img ng-src="{{video.thumbnail}}" style="height:100px;margin-left:40px">
+			</div>
+			<div class="col-md-6">
+				<h1 class="titulovid">{{ video.title }}</h1>
+			</div>
+			<div class="col-md-2">
+				<button type="button" class="btn btn-default btn-lg playbtn" ng-click="videoChange(video.link)">
+				<span class="glyphicon glyphicon-play-circle"></span>
+			</button>
+			</div>
+
+		</div>
+	</div>
+	</div>
